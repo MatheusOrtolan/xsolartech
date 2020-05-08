@@ -29,7 +29,6 @@ export default function CadastrarCliente({navigation}){
                         'Content-Type': 'application/json'
                     },
                 })
-
             }
             else{
                 throw MyCustomError(res.statusText);
@@ -71,7 +70,6 @@ export default function CadastrarCliente({navigation}){
                         <Input
                             placeholder='Nome' marginTop={20} value={name} onChangeText={(text)=>setName(text)}
                         />
-                        
                         <Input
                             placeholder='Cpf' value={cpf} onChangeText={(text)=>setCpf(text)}
                         />
@@ -80,18 +78,13 @@ export default function CadastrarCliente({navigation}){
                         />
                         <Input
                             placeholder='Email' value={email} onChangeText={(text)=>setEmail(text)}
-                        />
-
-                        
+                        />                        
                         <Input
                             placeholder='End' value={end} onChangeText={(text)=>setEnd(text)}
                         />
-                        
                         <Input
                             placeholder='EndSec' value={endsec} onChangeText={(text)=>setEndSec(text)}
                         />
-                        
-
                         <TouchableOpacity style={styles.button} onPress={enviarCliente}>
                             <Text style={styles.buttonText}>Cadastrar Cliente</Text>
                         </TouchableOpacity>
